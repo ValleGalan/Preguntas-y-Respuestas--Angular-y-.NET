@@ -1,0 +1,30 @@
+p{
+    font-family: 'Rowdies', cursive;
+    font-size: 2em;
+    color: #31112C;
+    
+}
+
+.conteiner{
+    margin-top: 22%;
+}
+hr{
+    border-width: 3px;
+    max-width: 75px;
+    border-color: #31112C;
+}
+.mat-raised-button{
+    background-color: #7D0633;
+    color: cornsilk;
+    padding: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.3em;
+    border-radius: 7%;
+}
+.mat-raised-button:hover{
+    background-color:#F2A07B;
+    color:black;
+    border-color: chocolate solid;
+    border-width: 3px;
+}

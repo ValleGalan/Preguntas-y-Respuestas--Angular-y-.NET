@@ -1,0 +1,22 @@
+form{
+    border-color: #7D0633;
+    margin-top: 8%;
+    border-width: 4%;
+    width: 40%;
+    background-color: #FBDCC4;
+}
+.mat-raised-button{
+    background-color: #7D0633;
+    color: cornsilk;
+    padding: 3px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1em;
+    border-radius: 7%;
+}
+.mat-raised-button:hover{
+    background-color:#F2A07B;
+    color:black;
+    border-color: chocolate solid;
+    border-width: 3px;
+}

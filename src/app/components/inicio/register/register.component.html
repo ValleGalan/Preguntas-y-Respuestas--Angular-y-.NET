@@ -1,0 +1,28 @@
+<div fxLayoutAlign="center center">
+    <form [formGroup]="register"  (ngSubmit)="log()"
+        fxLayout="column" fxLayoutAlign="center center" >
+    <P>LOGIN</P>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input matInput formControlName="usuario"><!--formControlName para vincular la variable ts-->
+         <!--
+             <span class="text" *ngIf="login.get('usuario').hasError('required') && login.get('usuario').touched"
+         >el usuario es <strong>requerido</strong></span>
+         -->
+        </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="password">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Repetir contraseña</mat-label>
+        <input matInput formControlName="password">
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="15">
+        <button mat-raised-button  type="submit">Aceptar</button>
+        <button mat-raised-button routerLink="/login">Volver</button>
+    </div>
+
+</form>
+
+</div>
