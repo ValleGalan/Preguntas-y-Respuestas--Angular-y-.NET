@@ -1,26 +1,26 @@
 <div fxLayoutAlign="center center">
-    <form [formGroup]="register"  (ngSubmit)="log()"
+    <form [formGroup]="register"  (ngSubmit)="registrarUsuario()"
         fxLayout="column" fxLayoutAlign="center center" >
-    <P>LOGIN</P>
+    <P>REGISTRARSE</P>
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Usuario</mat-label>
-        <input matInput formControlName="usuario"><!--formControlName para vincular la variable ts-->
-         <!--
-             <span class="text" *ngIf="login.get('usuario').hasError('required') && login.get('usuario').touched"
-         >el usuario es <strong>requerido</strong></span>
-         -->
-        </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Contraseña</mat-label>
-        <input matInput formControlName="password">
+        <mat-label>Usuario</mat-label> <input matInput formControlName="usuario"><!--formControlName para vincular la variable ts-->
+        <span class="text" *ngIf="register.get('usuario').hasError('required') && register.get('usuario').touched">el usuario es <strong>requerido</strong></span>
     </mat-form-field>
+
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Repetir contraseña</mat-label>
-        <input matInput formControlName="password">
+        <mat-label>Contraseña</mat-label> <input matInput formControlName="password">
+        <span class="text" *ngIf="register.get('password').hasError('required') && register.get('password').touched">la contraseña es <strong>requerido</strong></span>
+        <span class="text" *ngIf="register.get('password').hasError('minlength') && register.get('password').touched">la contraseña debe tener como  <strong>minimo 4 caracteres</strong></span>
     </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Repetir contraseña</mat-label> <input matInput formControlName="confirmPassword">
+        <span class="text" *ngIf="register.hasError('notSame')">contraseñas <strong>distintas</strong> </span>
+    </mat-form-field>
+
     <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="15">
         <button mat-raised-button  type="submit">Aceptar</button>
-        <button mat-raised-button routerLink="/login">Volver</button>
+        <button mat-raised-button routerLink="/inicio/login">Volver</button>
     </div>
 
 </form>
