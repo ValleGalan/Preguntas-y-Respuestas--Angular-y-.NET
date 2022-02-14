@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 //componentes
 import { InicioComponent } from './components/inicio/inicio.component';
 import { BienvenidaComponent } from './components/inicio/bienvenida/bienvenida.component';
-import { LoginComponent } from './components/inicio/login/login.component';
+
 import { RegisterComponent } from './components/inicio/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Importaciones
@@ -23,6 +23,7 @@ import { NavbarComponent } from './components/dashboard/navbar/navbar.component'
 
 
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './components/inicio/login/login.component';
 
 @NgModule({
   declarations: [
